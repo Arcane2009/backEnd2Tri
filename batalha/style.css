@@ -13,6 +13,10 @@ body{
     width: 100%;
     max-width: 500px;
 }
+.cult_video{
+    width: 500px;
+    border-radius: 100px;
+}
 h2{
     text-align: center;
     color: white;
