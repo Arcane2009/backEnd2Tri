@@ -6,23 +6,16 @@ Modifique a classe Heroi para que o construtor também receba e armazene esse n�
  No JavaScript da função, capture esse novo input e garanta que o nível seja exibido 
  no painel de resultado acessando a propriedade do objeto."
 */ 
-function criarHeroi() {
-    const nome = document.getElementById('nomeInput').value;
-    const classe = document.getElementById('classeSelect').value;
-    const nivel = document.getElementById('nivelInput').value;
-    const log = document.getElementById('resultado');
-
-    console.log(nome,classe,nivel)
-
-    if(!nome){
-        alert("Escolha um nome");
-        return;
+class heroi{
+    constructor(nome,classe){
+        this.nome = nome;
+        this.classe = classe;
     }
-    if(!nivel){
-        alert("Escolha um nível");
-        return;
-    }
-    if(nivel < 0){
-        alert("Seu nível não pode ser negativo");
-    }
+}
+function criarHeroi(){
+//Capturndo o que o usuário digitou/selecionou na tela
+    const nomeDigitado = document.getElementById('nomeInput').value;
+    const classeSelecionada = document.getElementById('classeSelect').value;
+    //Criando o objeto dinamicamente com os valores dos campos
+    const novoHeroi = new heroi(nomeDigitado,classeSelecionada);
 }
