@@ -7,15 +7,24 @@ Modifique a classe Heroi para que o construtor também receba e armazene esse n�
  no painel de resultado acessando a propriedade do objeto."
 */ 
 class heroi{
-    constructor(nome,classe){
+    constructor(nome,classe,nivel){
         this.nome = nome;
         this.classe = classe;
+        this.nivel = nivel;
     }
 }
 function criarHeroi(){
 //Capturndo o que o usuário digitou/selecionou na tela
     const nomeDigitado = document.getElementById('nomeInput').value;
     const classeSelecionada = document.getElementById('classeSelect').value;
+    const nivelDecidido = document.getElementById('nivelInput').value;
     //Criando o objeto dinamicamente com os valores dos campos
-    const novoHeroi = new heroi(nomeDigitado,classeSelecionada);
+    const novoHeroi = new heroi(nomeDigitado,classeSelecionada, nivelDecidido);
+
+    //Exibindo na tela através das propriedades do objeto
+    document.getElementById('resultado').style.display = "block";
+    document.getElementById('dadosHeroi').innerHTML = 
+    `Nome: <strong>${novoHeroi.nome}</strong><br>
+    Classe: <strong>${novoHeroi.classe}</strong><br>
+    Nível: <strong>${novoHeroi.nivel}</strong>`;
 }
