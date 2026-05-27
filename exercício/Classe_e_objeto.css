@@ -15,8 +15,8 @@
     border-radius: 8px; 
     max-width: 400px; 
     margin: 20px auto; 
-    text-align: left; 
-        }
+    text-align: center; 
+}
 input,select,button { 
     width: 100%; 
     padding: 10px; 
@@ -37,8 +37,14 @@ button {
     color: white; 
     font-weight: bold; 
     cursor: pointer; 
-        }
+}
 button:hover{
     background: #d42a00; 
     color: rgb(0, 0, 0); 
+    transition: 0.3s ease-in-out;
+    transform: 0.2s ease;
+}
+/*--------------------------------------------------------------*/
+strong{
+    color: red;
 }
