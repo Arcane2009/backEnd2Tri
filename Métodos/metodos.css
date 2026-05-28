@@ -1,0 +1,58 @@
+body{ 
+  font-family: sans-serif; 
+  background: #222; 
+  color: #fff; 
+  padding: 20px; 
+  text-align: center;
+}
+.cult_video{
+  width: 500px;
+  border: 0px;
+  border-radius: 100px;
+}
+.caixa{ 
+  background: #333; 
+  padding: 15px; 
+  border-radius: 8px; 
+  max-width: 400px; 
+  margin: 20px auto; 
+  text-align: left;
+}
+input,button{ 
+  width: 100%; 
+  padding: 10px; 
+  margin: 5px 0; 
+  border-radius: 4px; border: none; box-sizing: border-box;
+  cursor: pointer;
+}
+input[type="text"]{
+  color: #d42a00;
+}
+.btn-principal{ 
+  background: #00bcd4; 
+  color: white; 
+  font-weight: bold; 
+}
+button:hover{
+  background: #d42a00; 
+  color: rgb(0, 0, 0); 
+  transition: 0.3s ease-in-out;
+  transform: 0.2s ease;
+}
+.btn-atacar{ 
+  background: #ff5722; 
+  color: white; 
+}
+.painel-combate{ 
+  display: none;
+}
+#log{
+  margin-top: 15px;
+  font-style: italic;
+  color: #ffeb3b;
+  text-align: center;
+}
+/*--------------------------------------------------------------*/
+strong{
+  color: red;
+}
