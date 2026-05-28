@@ -14,12 +14,23 @@ class heroi{
     }
 }
 function criarHeroi(){
-//Capturndo o que o usuário digitou/selecionou na tela
+    //Capturndo o que o usuário digitou/selecionou na tela
     const nomeDigitado = document.getElementById('nomeInput').value;
     const classeSelecionada = document.getElementById('classeSelect').value;
     const nivelDecidido = document.getElementById('nivelInput').value;
     //Criando o objeto dinamicamente com os valores dos campos
     const novoHeroi = new heroi(nomeDigitado,classeSelecionada, nivelDecidido);
+
+    if(!nomeDigitado){
+        alert("Seu herói precisa de um nome");
+        return;
+    }
+    if(nivelDecidido < 0){
+        alert("Seu nível não pode ser negativo");
+    }
+    if(!nivelDecidido){
+        alert("Seu herói precisa de um nível");
+    }else{
 
     //Exibindo na tela através das propriedades do objeto
     document.getElementById('resultado').style.display = "block";
@@ -27,4 +38,4 @@ function criarHeroi(){
     `Nome: <strong>${novoHeroi.nome}</strong><br>
     Classe: <strong>${novoHeroi.classe}</strong><br>
     Nível: <strong>${novoHeroi.nivel}</strong>`;
-}
+}}

@@ -1,4 +1,4 @@
- body { 
+body{ 
     font-family: sans-serif; 
     background: #222; 
     color: #fff; 
@@ -9,7 +9,7 @@
     width: 500px;
     border-radius: 100px;
 }
-.caixa { 
+.caixa{ 
     background: #333; 
     padding: 15px; 
     border-radius: 8px; 
@@ -17,7 +17,7 @@
     margin: 20px auto; 
     text-align: center; 
 }
-input,select,button { 
+input,select,button{ 
     width: 100%; 
     padding: 10px; 
     margin: 8px 0; 
