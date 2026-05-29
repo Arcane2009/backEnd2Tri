@@ -33,15 +33,21 @@ input[type="text"]{
   color: white; 
   font-weight: bold; 
 }
-button:hover{
+.btn-principal:hover{
   background: #d42a00; 
   color: rgb(0, 0, 0); 
   transition: 0.3s ease-in-out;
   transform: 0.2s ease;
 }
 .btn-atacar{ 
-  background: #ff5722; 
+  background: #d42a00; 
   color: white; 
+}
+.btn-atacar:hover{
+  background: #00bcd4; 
+  color: rgb(0, 0, 0); 
+  transition: 0.3s ease-in-out;
+  transform: 0.2s ease;
 }
 .painel-combate{ 
   display: none;
