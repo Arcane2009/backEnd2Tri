@@ -9,11 +9,15 @@
 
     <h2>⚔️ Simulador de Batalha - Desafio Aluno</h2>
     
+    <video class="cult_video" autoplay muted loop>
+        <source src="feb83e698c80217ce360f52c2aad83fc.webm" type="video/webm" />
+    </video>
+
     <div class="caixa" id="painel-criacao">
         <label>Nome do Monstro:</label>
-        <input type="text" id="nomeMonstro" placeholder="Ex: Orc Chefe">
+        <input type="text" id="nomeMonstro"  >
         <label>HP Inicial:</label>
-        <input type="number" id="hpMonstro" placeholder="Ex: 100">
+        <input type="number" id="hpMonstro" min="0" value="100">
         <button class="btn-principal" onclick="iniciarJogo()">Dar Vida ao Monstro</button>
     </div>
 
@@ -22,14 +26,14 @@
         <h4 id="statusHp"></h4>
         
         <label>Quantidade de Dano para Aplicar:</label>
-        <input type="number" id="danoInput" placeholder="Ex: 15">
+        <input type="number" id="danoInput" value="15">
         <button class="btn-atacar" onclick="baterNoMonstro()">Desferir Ataque</button>
         
         <label style="margin-top: 15px; display: block;">Quantidade de Cura para Aplicar:</label>
         <input type="number" id="curaInput" placeholder="Ex: 10">
         <button class="btn-curar" onclick="curarMonstro()">Usar Poção de Cura</button>
         
-        <p id="log" style="margin-top: 15px; font-style: italic; color: #ffeb3b; text-align: center;"></p>
+        <p id="log"></p>
     </div>
 
     <script src="./metodo.js">
