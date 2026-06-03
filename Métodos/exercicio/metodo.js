@@ -12,7 +12,13 @@ receberDano(quantidade){
     }
     return `${this.nome} sofreu ${quantidade} de dano!`;
     }
-    }
+
+receberCura(quantidade){
+    this.hp += quantidade;
+    return `${this.nome} recebeu ${quantidade} de cura!`;
+}
+}
+
 
 function atualizarTela(){
     document.getElementById('statusNome').innerText = monstroDaBatalha.nome;
@@ -40,17 +46,17 @@ function baterNoMonstro(){
 const valorDano = Number(document.getElementById('danoInput').value);
     
     
-const msg_Dano = monstroDaBatalha.receberDano(valorDano);
+const msg = monstroDaBatalha.receberDano(valorDano);
     
-document.getElementById('log').innerText = msg_Dano;
+document.getElementById('log').innerText = msg;
 atualizarTela();
 }
 
 function curarMonstro(){
 const valorCura = Number(document.getElementById('curaInput').value);
         
-const msg_Cura = monstroDaBatalha.receberDano(valorDano);
+const msg = monstroDaBatalha.receberCura(valorCura);
     
-document.getElementById('log').innerText = msg_Cura;
+document.getElementById('log').innerText = msg;
 atualizarTela();
 }
