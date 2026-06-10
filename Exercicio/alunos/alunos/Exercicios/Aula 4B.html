@@ -1,0 +1,30 @@
+<!--
+Crie um objeto chamado perfil com a propriedade booleana seguindo iniciando em 
+false. Crie um método chamado trocarSeguir que inverte esse valor. Complete a 
+função do script para que o texto do botão mude dinamicamente para "Seguindo ✓" 
+ou "Seguir".
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>4B - Exercício: Seguir</title>
+</head>
+<body>
+    <h2>Exercício 4B: Rede Social</h2>
+    <button onclick="cliqueSeguir()" id="btnSeguir">Seguir</button>
+
+    <script>
+    const seguir = {
+        seguindo: false,
+        alternar: function(){
+            this.seguindo = !this.seguindo;
+    }
+};
+    function cliqueSeguir(){
+        seguir.alternar();
+        document.getElementById("btnSeguir").innerHTML = seguir.seguindo ? "SEGUINDO :)" : "SEM SEGUIR >:(";
+    };
+    </script>
+</body>
+</html>
