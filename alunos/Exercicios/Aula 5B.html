@@ -1,0 +1,34 @@
+<!--
+Crie um objeto chamado carro com a propriedade combustivel iniciando em 20. 
+Crie um método chamado adicionarGasolina(litros) que recebe a quantidade digitada 
+e soma no tanque atual. Capture o valor digitado pelo usuário e passe para o método 
+do seu objeto.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>5B - Exercício: Combustível</title>
+</head>
+<body>
+    <h2>Exercício 5B: Tanque de Combustível</h2>
+    <p>Gasolina no Tanque: <span id="txtGasolina">20</span> Litros</p>
+
+    <input type="number" id="valGasolina" placeholder="Quantos litros?">
+    <button onclick="executarAbastecimento()">Abastecer</button>
+
+    <script>
+       const galao = {
+            litros: 20,
+            depositar: function(valor){
+                this.litros += valor;
+            }
+        };
+        function executarAbastecimento(){
+            let inputValor = Number(document.getElementById("valGasolina").value);
+            galao.depositar(inputValor);
+            document.getElementById("txtGasolina").innerText = galao.litros;
+        }
+    </script>
+</body>
+</html>
