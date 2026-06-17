@@ -19,7 +19,25 @@ avisando que está no máximo.
     <p id="msgVol" style="color: red;"></p>
 
     <script>
-       
+       const som = {
+            volumeAtual: 0,
+            volumeMáximo: 10,
+            aumentarVolume: function(){
+                if(this.volumeAtual + 2 <= this.volumeMáximo){
+                    this.volumeAtual += 2;
+                    return "";
+                }
+                else{
+                    this.velocidade = this.volumeMáximo;
+                    return "Limite 10Km/h de volume atingido"
+                }
+            }
+        }
+        function maisSom(){
+            let msg = som.aumentarVolume();
+            document.getElementById("txtVol").innerText = som.volumeAtual;
+            document.getElementById("msgVol").innerText = msg;
+        }
     </script>
 </body>
 </html>
