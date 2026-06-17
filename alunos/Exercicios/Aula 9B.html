@@ -17,7 +17,25 @@ mas não pode deixar cair para menos de 0). Amarre os métodos aos botões de + 
     <button onclick="subFalta()">- Cancelar Falta</button>
 
     <script>
-       
-    </script>
+        const faltas = {
+         quantidade: 0,
+         adicionar: function(){
+             this.quantidade ++;
+         },
+         remover: function(){
+             if(this.quantidade > 0){
+                 this.quantidade --;
+             }
+         }
+        };
+        function addFalta(){
+         faltas.adicionar();
+         document.getElementById("numFaltas").innerHTML = faltas.quantidade;
+        }
+        function subFalta(){
+         faltas.remover();
+         document.getElementById("numFaltas").innerHTML = faltas.quantidade;
+        }
+     </script>
 </body>
 </html>
