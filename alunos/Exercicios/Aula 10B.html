@@ -19,7 +19,24 @@ caso contrário retorne "Clima Normal".
     <p id="txtClima">Clima: ---</p>
 
     <script>
-       
+        const boletim = {
+            manha: 32,
+            tarde: 38,
+            calcularMedia: function (){
+                return (this.manha + this.tarde)/2;
+            },
+            analisarClima: function (){
+                if(this.calcularMedia() > 35){
+                    return "Dia Excessivamente Quente";
+                }
+                else{
+                    return "Clima Normal";
+                }
+            }
+        };
+        function checarClima(){
+            document.getElementById("txtClima").innerText = boletim.analisarClima();
+        }
     </script>
 </body>
 </html>
