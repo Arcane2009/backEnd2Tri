@@ -9,6 +9,6 @@ public class Aula09_ClasseAtributos{
         meuCarro.cor = "Azul";
         meuCarro.ano = 1975;
 
-        System.out.println("Carro criado " + meu.Carro.modelo + " " + meuCarro.cor);
+        System.out.println("Carro criado " + meuCarro.modelo + " " + meuCarro.cor);
     }
 }
